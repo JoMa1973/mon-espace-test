@@ -516,3 +516,8 @@ body{background:var(--page)}
 :root.phone-ui .aurora-page .aurora-panel strong{font-size:clamp(18px,5vw,25px)!important}
 :root.phone-ui .aurora-page .aurora-primary{font-size:15px!important}
 :root.phone-ui .aurora-page .aurora-muted{font-size:12px!important}
+/* V4.7.1 — onglets actifs et navigation tactile */
+.aurora-tabs>button:first-child:not(.selected){background:#0d2139;color:#d8e7fa}
+.aurora-tabs>button.selected{background:linear-gradient(115deg,#1bd2f4,#3566f5);color:#07162b;font-weight:700}
+.aurora-tabs>button{cursor:pointer;min-height:42px}
+.aurora-category{overflow:hidden}.aurora-line span{overflow-wrap:anywhere}
