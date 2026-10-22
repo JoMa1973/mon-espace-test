@@ -575,3 +575,9 @@ body::before{background-image:linear-gradient(180deg,rgba(2,9,22,.10),rgba(2,9,2
 
 /* V5.3: preserve native image detail; no blur */
 body::before{filter:none!important;image-rendering:auto!important}
+
+/* V5.4: fonds indépendants par espace, images originales non floutées */
+:root[data-module="house"]{--nexus-image:url('./nexus-maison.jpg')}
+:root[data-module="travel"]{--nexus-image:url('./nexus-voyage.jpg')}
+:root[data-module="notes"]{--nexus-image:url('./nexus-notes.jpg')}
+:root[data-module="projects"]{--nexus-image:url('./nexus-projets.jpg')}
