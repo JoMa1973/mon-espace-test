@@ -452,3 +452,67 @@ body{background:var(--page)}
 :root.phone-ui .nav button{font-size:clamp(18px,5vw,25px)!important;line-height:1.05!important;min-height:72px!important;overflow-wrap:anywhere!important}
 :root.phone-ui .nav .emoji{font-size:clamp(32px,9vw,43px)!important}
 :root.phone-ui .cockpit-section,:root.phone-ui .cockpit-tile,:root.phone-ui .neo-widget,:root.phone-ui .neo-gateway-tile{overflow-wrap:anywhere!important;min-width:0!important}
+
+/* V4.6.6 — correction typographique mobile, sans toucher aux données */
+@media(max-width:600px){
+ :root.phone-ui .neo-widgets,:root.phone-ui .neo-gateway-grid,:root.phone-ui .neo-command-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ :root.phone-ui .neo-widget,:root.phone-ui .neo-gateway-tile,:root.phone-ui .neo-command-card{min-width:0!important;padding:12px 10px!important;overflow:hidden!important}
+ :root.phone-ui .neo-widget-head,:root.phone-ui .neo-widget-head strong,:root.phone-ui .neo-gateway-tile b,:root.phone-ui .module-tile b{font-size:clamp(15px,4.2vw,19px)!important;line-height:1.22!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:auto!important}
+ :root.phone-ui .neo-widget-metric,:root.phone-ui .neo-command-card strong{font-size:clamp(25px,7vw,36px)!important;line-height:1.12!important;letter-spacing:-.035em!important;overflow-wrap:anywhere!important}
+ :root.phone-ui .neo-widget p,:root.phone-ui .neo-widget small,:root.phone-ui .neo-widget-link,:root.phone-ui .neo-gateway-tile small,:root.phone-ui .module-tile small,:root.phone-ui .neo-command-card small,:root.phone-ui .neo-command-card>span{font-size:clamp(13px,3.7vw,17px)!important;line-height:1.3!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:auto!important}
+ :root.phone-ui .neo-personal-heading h3,:root.phone-ui .heading h3{font-size:clamp(20px,5.5vw,26px)!important;line-height:1.2!important}
+ :root.phone-ui .btn,:root.phone-ui .btn.small,:root.phone-ui .cockpit-section button{font-size:clamp(13px,3.8vw,17px)!important;line-height:1.25!important;overflow-wrap:normal!important;word-break:normal!important;padding:8px 10px!important;hyphens:auto!important}
+ :root.phone-ui .cockpit-tile strong{font-size:clamp(21px,5.8vw,29px)!important;line-height:1.15!important;letter-spacing:-.02em!important}
+ :root.phone-ui .cockpit-tile span,:root.phone-ui .cockpit-tile small,:root.phone-ui .cockpit-tile p,:root.phone-ui .cockpit-tile .tile-note{font-size:clamp(13px,3.7vw,17px)!important;line-height:1.28!important}
+ :root.phone-ui .nav button{font-size:clamp(12px,3.5vw,16px)!important;line-height:1.2!important;min-height:64px!important}
+ :root.phone-ui .nav .emoji{font-size:clamp(24px,7vw,32px)!important}
+}
+
+/* V4.7 Midnight Aurora: layout-first, mobile typography, no clipped cockpit labels */
+:root.phone-ui .content, .content{min-width:0}
+.aurora-page{color:#f2f7ff;display:grid;gap:14px;font-size:15px;min-width:0}
+.aurora-page *{box-sizing:border-box;min-width:0}
+.aurora-page h2{font-size:24px;line-height:1.2;margin:0}
+.aurora-page h3{font-size:17px;margin:8px 0 0}
+.aurora-page small{font-size:12px;line-height:1.35;color:#adc2d8}
+.aurora-welcome h2{margin:0 0 5px}
+.aurora-pagehead{display:flex;justify-content:space-between;align-items:center}
+.aurora-add{border:1px solid #46688d;border-radius:14px;background:linear-gradient(135deg,#00b8e5,#6947ef);color:white;font-size:24px;min-width:44px;min-height:44px}
+.aurora-tabs{display:flex;gap:6px;min-width:0}.aurora-tabs>*{flex:1;min-width:0;white-space:nowrap;border:1px solid #274665;background:#0d2139;color:#d8e7fa;border-radius:12px;text-align:center;padding:10px 4px;font-size:clamp(11px,3vw,14px)}.aurora-tabs>.selected,.aurora-tabs>button:first-child{background:linear-gradient(115deg,#1bd2f4,#3566f5);color:#07162b}
+.aurora-cards,.aurora-duo,.aurora-statgrid,.aurora-modulegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.aurora-card{border:1px solid #167da5;border-radius:18px;padding:14px 12px;min-height:175px;text-align:left;color:white;display:flex;flex-direction:column;align-items:stretch;gap:9px;background:linear-gradient(150deg,#0c4158,#081a32);overflow:hidden;overflow-wrap:break-word}
+.aurora-card span{font-size:clamp(15px,4vw,19px);font-weight:700;display:flex;justify-content:space-between;gap:4px;align-items:center;white-space:nowrap}
+.aurora-card strong{font-size:clamp(23px,6.4vw,34px);line-height:1.05;letter-spacing:-.04em;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.aurora-card small{font-size:clamp(11px,3vw,13px);line-height:1.35}.aurora-card em{font-size:12px;font-style:normal;margin-top:auto;color:#c4def2}.aurora-card.purple{background:linear-gradient(150deg,#30255c,#101c3d);border-color:#7356c3}.aurora-card.green{background:linear-gradient(150deg,#07544d,#082a35);border-color:#0eac91}.aurora-card.amber{background:linear-gradient(150deg,#604020,#231e2d);border-color:#c58b42}
+.aurora-meter{width:62px;height:62px;border-radius:50%;border:6px solid #12cbea;margin:0 0 0 auto}
+.aurora-panel{border:1px solid #254765;border-radius:18px;background:linear-gradient(140deg,#0e2941,#0a1a31);padding:16px;display:grid;gap:10px;overflow-wrap:anywhere}
+.aurora-panel strong{font-size:clamp(19px,5vw,25px)}.aurora-line{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #233e56}.aurora-muted{color:#9fb5cb;font-size:12px;line-height:1.5}
+.aurora-date{display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:center}.aurora-date strong{font-size:14px}.aurora-date button{border:1px solid #2a5477;border-radius:50%;width:36px;height:36px;background:#0d2842;color:#e5f8ff;font-size:23px}
+.aurora-event{display:flex;align-items:start;gap:12px;text-align:left;color:#e7f3ff;background:#102b46;border:1px solid #2b4d6d;border-radius:14px;padding:14px;width:100%}.aurora-event time{font-size:12px;color:#b6d1e9}.aurora-event span{display:grid;gap:6px}.aurora-event b{font-size:14px}
+.aurora-primary{width:100%;border:1px solid #27bbf5;border-radius:13px;padding:13px;background:linear-gradient(110deg,#03bce4,#643df3);color:white;font-weight:700;font-size:15px}
+.aurora-budget-balance{display:flex;align-items:center;justify-content:space-between;gap:8px}.aurora-budget-balance strong{font-size:clamp(25px,7vw,38px)}.aurora-ring,.aurora-big-ring{border-radius:50%;background:radial-gradient(closest-side,#0b2037 74%,transparent 76%),conic-gradient(#11cbe8 var(--pct),#23354e 0);display:grid;place-items:center;flex-shrink:0}.aurora-ring{width:76px;height:76px;font-size:13px;font-weight:700}.aurora-big-ring{width:154px;height:154px;align-content:center}.aurora-big-ring strong{font-size:28px}.aurora-category{display:grid;grid-template-columns:1fr auto;gap:6px 10px;padding:12px;border:1px solid #233c58;border-radius:12px;background:#0c2037}.aurora-category b{font-size:13px}.aurora-category i{grid-column:1/-1;height:5px;background:linear-gradient(to right,#1bc7e7 var(--value),#2a3e56 0);border-radius:10px}
+.aurora-statgrid section{padding:15px 8px;border:1px solid #2c4864;border-radius:14px;background:#10243d;display:grid;gap:7px;text-align:center}.aurora-statgrid b{font-size:clamp(19px,5.3vw,27px)}.aurora-nutrition-main{display:flex;gap:16px;align-items:center}.aurora-nutrition-main>div:last-child{display:grid;gap:9px}.aurora-nutrition-main>div:last-child strong{font-size:20px}.aurora-nutrition-main p{margin:0;font-size:13px}.aurora-statgrid.macros{grid-template-columns:repeat(3,minmax(0,1fr))}.aurora-statgrid.macros b{font-size:17px}
+.aurora-module{min-height:100px;border:1px solid #266c91;border-radius:15px;background:linear-gradient(135deg,#12445b,#102448);padding:15px;color:white;text-align:left;display:grid;grid-template-columns:1fr auto;gap:10px}.aurora-module span{grid-column:1/-1;font-size:26px;color:#24d6ef}.aurora-module b{font-size:15px}.aurora-module em{font-size:22px;font-style:normal}.aurora-module.m1,.aurora-module.m5{border-color:#6550a4;background:linear-gradient(135deg,#29234e,#102448)}.aurora-module.m2{border-color:#267d73;background:linear-gradient(135deg,#13483d,#102448)}.aurora-module.m3{border-color:#a06d2e;background:linear-gradient(135deg,#493b26,#102448)}
+.aurora-legacy{border:1px solid #304a65;border-radius:12px;margin-top:12px}.aurora-legacy summary{padding:13px;cursor:pointer;color:#b9d4ed;font-size:13px}.aurora-legacy-body{padding:10px}.aurora-legacy-body .panel{margin-bottom:12px}
+:root.phone-ui .aurora-page .aurora-card strong,:root.phone-ui .aurora-page .aurora-card span,:root.phone-ui .aurora-page .aurora-card small,:root.phone-ui .aurora-page .aurora-panel small,:root.phone-ui .aurora-page .aurora-pagehead h2,:root.phone-ui .aurora-page .aurora-primary{font-size:inherit!important;line-height:inherit!important}
+:root.phone-ui .aurora-page .aurora-card strong{font-size:clamp(23px,6.4vw,34px)!important;line-height:1.1!important}
+:root.phone-ui .aurora-page .aurora-card span{font-size:clamp(15px,4vw,19px)!important}
+:root.phone-ui .aurora-page .aurora-card small{font-size:12px!important}
+:root.phone-ui .nav button{font-size:clamp(10px,2.9vw,13px)!important;min-height:59px!important;overflow-wrap:normal!important}
+:root.phone-ui .nav .emoji{font-size:clamp(21px,6vw,27px)!important}
+:root.phone-ui .nav-inner{gap:0!important}
+@media(max-width:390px){.aurora-card{padding:12px 9px}.aurora-page{gap:11px}.aurora-nutrition-main{gap:10px}.aurora-big-ring{width:128px;height:128px}}
+/* Compact common masthead; the six page headings now live inside each screen. */
+.hero .neo-command,.hero>.theme-switch,.hero>h2{display:none!important}
+.hero{padding-bottom:10px!important}
+.hero .top{align-items:center}
+.hero .top .muted-light{font-size:11px!important}
+.hero .top h1{font-size:19px!important}
+.hero .top .btn{font-size:12px!important;padding:8px!important}
+:root.phone-ui .hero .top h1{font-size:19px!important}
+:root.phone-ui .hero .top .btn{font-size:12px!important}
+:root.phone-ui .aurora-page .aurora-tabs>*{font-size:12px!important;padding:10px 3px!important}
+:root.phone-ui .aurora-page .aurora-pagehead h2{font-size:24px!important}
+:root.phone-ui .aurora-page .aurora-panel strong{font-size:clamp(18px,5vw,25px)!important}
+:root.phone-ui .aurora-page .aurora-primary{font-size:15px!important}
+:root.phone-ui .aurora-page .aurora-muted{font-size:12px!important}

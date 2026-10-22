@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='mon-espace-v4.6.5';
-const OFFLINE=['./index.html','./style.css?v=4.6.5','./app.js?v=4.6.5','./manifest.webmanifest?v=4.6.5','./icon-192.png','./icon-512.png'];
+const CACHE='mon-espace-v4.7.0';
+const OFFLINE=['./index.html','./style.css?v=4.7.0','./app.js?v=4.7.0','./manifest.webmanifest?v=4.7.0','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(OFFLINE)).then(()=>self.skipWaiting()));
 });
