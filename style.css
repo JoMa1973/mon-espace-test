@@ -581,3 +581,23 @@ body::before{filter:none!important;image-rendering:auto!important}
 :root[data-module="travel"]{--nexus-image:url('./nexus-voyage.jpg')}
 :root[data-module="notes"]{--nexus-image:url('./nexus-notes.jpg')}
 :root[data-module="projects"]{--nexus-image:url('./nexus-projets.jpg')}
+
+/* NEXUS V5.4.1 — uniform translucent glass on every module and cockpit.
+   No blur on the photographic backgrounds; consistent alpha across pages. */
+:root { --nexus-glass: rgba(7, 23, 43, .58); --nexus-glass-border: rgba(135, 206, 245, .32); }
+.aurora-page :is(.aurora-panel,.aurora-card,.aurora-category,.aurora-statgrid section,.aurora-module,.aurora-event),
+:is(.cockpit-section,.cockpit-tile,.cockpit-kpi,.cockpit-overview,.cockpit-budget,.cockpit-recent,.cockpit-env,.cockpit-notice,.cockpit-empty,.cockpit-tr,.cockpit-th),
+:is(.neo-gateway-tile,.neo-command-card,.neo-module-core,.neo-module-note,.module-tile,.quick-module,.full-kpi,.dash-card,.panel,.google-panel,.nutrition-meal-card,.nutrition-food-row,.week-mini-day,.macro-grid > div,.sport-stats > *, .record-kpis > *) {
+  background: var(--nexus-glass) !important;
+  background-image: none !important;
+  border-color: var(--nexus-glass-border) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* Colored cockpit cards retain their identity through accent borders, not opaque fills. */
+.aurora-card.cyan{border-color:rgba(31,210,239,.72)!important}
+.aurora-card.purple{border-color:rgba(159,121,255,.72)!important}
+.aurora-card.green{border-color:rgba(44,219,178,.72)!important}
+.aurora-card.amber{border-color:rgba(255,186,88,.72)!important}
+/* Prevent legacy inline colors from making nested glass areas opaque. */
+.aurora-page .aurora-legacy-body .panel{background:var(--nexus-glass)!important}
