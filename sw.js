@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='nexus-v4.8.0';
-const OFFLINE=['./index.html','./style.css?v=4.8.0','./app.js?v=4.8.0','./manifest.webmanifest?v=4.8.0','./icon-192.png','./icon-512.png','./nexus-horizon.jpg','./nexus-metropolis.jpg','./nexus-quantum.jpg'];
+const CACHE='nexus-v4.9.0';
+const OFFLINE=['./index.html','./style.css?v=4.9.0','./app.js?v=4.9.0','./manifest.webmanifest?v=4.9.0','./icon-192.png','./icon-512.png','./nexus-horizon.webp','./nexus-metropolis.webp','./nexus-quantum.webp','./nexus-serenity.webp','./nexus-altitude.webp','./nexus-infinity.webp'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(OFFLINE)).then(()=>self.skipWaiting()));
 });

@@ -542,3 +542,15 @@ body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradi
 .nav{background:rgba(5,20,38,.96)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 .aurora-welcome h2,.aurora-pagehead h2{text-shadow:0 2px 12px rgba(0,0,0,.55)}
 @media (prefers-reduced-motion:reduce){.aurora-panel,.aurora-card{transition:none!important}}
+
+/* NEXUS V4.9 - six cinematic landscapes, no blur on background image */
+:root{--nexus-image:url('./nexus-horizon.webp')}
+:root[data-module="agenda"],:root[data-module="tasks"]{--nexus-image:url('./nexus-metropolis.webp')}
+:root[data-module="budget"]{--nexus-image:url('./nexus-serenity.webp')}
+:root[data-module="sport"]{--nexus-image:url('./nexus-quantum.webp')}
+:root[data-module="nutrition"]{--nexus-image:url('./nexus-altitude.webp')}
+:root[data-module="info"],:root[data-module="trading"],:root[data-module="energy"],:root[data-module="house"]{--nexus-image:url('./nexus-infinity.webp')}
+body::before{background-image:linear-gradient(180deg,rgba(3,11,25,.14),rgba(3,12,27,.38) 48%,rgba(3,10,22,.65)),var(--nexus-image)!important;background-position:center center!important;background-size:cover!important;filter:none!important}
+.hero{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:rgba(5,18,34,.76)!important}
+.aurora-panel,.aurora-card,.aurora-category,.aurora-statgrid section,.aurora-module,.aurora-event{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.aurora-panel{background:rgba(8,24,43,.78)!important}
