@@ -1,0 +1,1 @@
+NEXUS V5.0 — six paysages séparés sans découpe à l’exécution. Sources issues de la planche fournie : les fichiers ne sont PAS des 4K natifs. PNG sans compression destructive. Sauvegardez vos données avant déploiement.
