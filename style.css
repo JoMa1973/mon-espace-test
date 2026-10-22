@@ -601,3 +601,22 @@ body::before{filter:none!important;image-rendering:auto!important}
 .aurora-card.amber{border-color:rgba(255,186,88,.72)!important}
 /* Prevent legacy inline colors from making nested glass areas opaque. */
 .aurora-page .aurora-legacy-body .panel{background:var(--nexus-glass)!important}
+
+/* V5.4.2 — correction priorite CSS: les panneaux des modules herites
+   etaient rendus opaques par :root[data-module] .content .panel. */
+:root[data-module] .content .panel,
+:root[data-module] .content .card,
+:root[data-module] .content .record-head,
+:root[data-module] .content .record-kpis > div,
+:root[data-module] .content .aurora-panel,
+:root[data-module] .content .aurora-card,
+:root[data-module] .content .neo-widget,
+:root[data-module] .content .neo-module-banner,
+:root[data-module] .content .cockpit-section,
+:root[data-module] .content .cockpit-tile {
+  background:rgba(7,23,43,.58)!important;
+  background-color:rgba(7,23,43,.58)!important;
+  background-image:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
