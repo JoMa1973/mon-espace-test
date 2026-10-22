@@ -521,3 +521,24 @@ body{background:var(--page)}
 .aurora-tabs>button.selected{background:linear-gradient(115deg,#1bd2f4,#3566f5);color:#07162b;font-weight:700}
 .aurora-tabs>button{cursor:pointer;min-height:42px}
 .aurora-category{overflow:hidden}.aurora-line span{overflow-wrap:anywhere}
+
+/* NEXUS V4.8 — cinematic background system, based on the three user-supplied images. */
+:root{--nexus-image:url('./nexus-horizon.jpg')}
+:root[data-module="agenda"],:root[data-module="budget"],:root[data-module="info"],:root[data-module="tasks"],:root[data-module="trading"]{--nexus-image:url('./nexus-metropolis.jpg')}
+:root[data-module="sport"],:root[data-module="energy"]{--nexus-image:url('./nexus-quantum.jpg')}
+html{background:#06101e!important}
+body{background:transparent!important;isolation:isolate}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background-image:linear-gradient(180deg,rgba(3,11,25,.52),rgba(3,12,27,.78) 46%,rgba(3,10,22,.92)),var(--nexus-image);background-size:cover;background-position:center;pointer-events:none}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 75% 5%,rgba(0,210,245,.12),transparent 45%);pointer-events:none}
+.shell,.content{background:transparent!important}
+.hero{background:linear-gradient(120deg,rgba(8,27,48,.86),rgba(12,35,63,.68))!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(80,184,228,.25)!important;box-shadow:0 10px 36px rgba(0,0,0,.18)!important}
+.aurora-panel,.aurora-card,.aurora-category,.aurora-statgrid section,.aurora-module,.aurora-event{backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);box-shadow:0 8px 25px rgba(0,0,0,.2)!important}
+.aurora-panel{background:rgba(8,24,43,.79)!important;border-color:rgba(117,196,238,.26)!important}
+.aurora-card.cyan{background:linear-gradient(135deg,rgba(9,69,87,.82),rgba(8,25,49,.86))!important}
+.aurora-card.purple{background:linear-gradient(135deg,rgba(49,32,96,.8),rgba(10,22,47,.86))!important}
+.aurora-card.green{background:linear-gradient(135deg,rgba(5,78,69,.8),rgba(8,28,45,.86))!important}
+.aurora-card.amber{background:linear-gradient(135deg,rgba(88,56,27,.83),rgba(26,24,42,.88))!important}
+.aurora-category,.aurora-event,.aurora-statgrid section{background:rgba(8,27,48,.8)!important}
+.nav{background:rgba(5,20,38,.96)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.aurora-welcome h2,.aurora-pagehead h2{text-shadow:0 2px 12px rgba(0,0,0,.55)}
+@media (prefers-reduced-motion:reduce){.aurora-panel,.aurora-card{transition:none!important}}

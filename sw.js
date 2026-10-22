@@ -1,11 +1,11 @@
 'use strict';
-const CACHE='mon-espace-v4.7.1';
-const OFFLINE=['./index.html','./style.css?v=4.7.1','./app.js?v=4.7.1','./manifest.webmanifest?v=4.7.1','./icon-192.png','./icon-512.png'];
+const CACHE='nexus-v4.8.0';
+const OFFLINE=['./index.html','./style.css?v=4.8.0','./app.js?v=4.8.0','./manifest.webmanifest?v=4.8.0','./icon-192.png','./icon-512.png','./nexus-horizon.jpg','./nexus-metropolis.jpg','./nexus-quantum.jpg'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(OFFLINE)).then(()=>self.skipWaiting()));
 });
 self.addEventListener('activate',event=>{
-  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('mon-espace-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));
+  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>(key.startsWith('mon-espace-')||key.startsWith('nexus-'))&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));
 });
 self.addEventListener('fetch',event=>{
   const request=event.request;

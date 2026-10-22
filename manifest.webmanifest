@@ -1,12 +1,12 @@
 {
-  "name": "Mon Espace",
-  "short_name": "Mon Espace",
-  "description": "Agenda, tâches et organisation personnelle",
+  "name": "NEXUS — Mon espace personnel",
+  "short_name": "NEXUS",
+  "description": "NEXUS : agenda, budget, sport, nutrition et organisation personnelle",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f3f6fc",
-  "theme_color": "#142b55",
+  "background_color": "#06101e",
+  "theme_color": "#081c32",
   "lang": "fr",
   "icons": [
     {
