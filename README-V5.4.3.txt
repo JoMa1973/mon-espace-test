@@ -1,0 +1,1 @@
+NEXUS V5.4.3 TEST — harmonisation de la transparence des cadres des modules et du cockpit. Images et fonctionnalités conservées. Version de cache actualisée. Avant déploiement, exporter la sauvegarde JSON depuis les réglages. Décompresser puis déposer le contenu à la racine du dépôt GitHub Pages. Vérifier visuellement sur téléphone et ordinateur.

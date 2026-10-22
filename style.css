@@ -620,3 +620,16 @@ body::before{filter:none!important;image-rendering:auto!important}
   backdrop-filter:none!important;
   -webkit-backdrop-filter:none!important;
 }
+
+
+/* V5.4.3 — transparence unifiée, sans flou, sur tous les modules et cockpit. */
+:root { --nexus-glass:rgba(7,23,43,.52); --nexus-glass-border:rgba(135,206,245,.32); }
+:root[data-theme="color"] :is(.content,.hero) :is(.panel,.card,.aurora-panel,.aurora-card,.aurora-category,.aurora-module,.aurora-event,.neo-widget,.neo-module-banner,.neo-module-core,.neo-module-note,.record-head,.record-kpis>div,.module-tile,.quick-module,.full-kpi,.dash-card,.neo-gateway,.neo-gateway-tile,.neo-command-card,.cockpit-section,.cockpit-tile,.cockpit-overview,.cockpit-kpi,.cockpit-env,.cockpit-recent,.cockpit-subtabs span,.cockpit-tabs button,.neo-main-metric,.neo-envelope,.neo-finance-stats>div,.stat,.aurora-statgrid section),
+:root[data-theme="dark"] :is(.content,.hero) :is(.panel,.card,.aurora-panel,.aurora-card,.aurora-category,.aurora-module,.aurora-event,.neo-widget,.neo-module-banner,.neo-module-core,.neo-module-note,.record-head,.record-kpis>div,.module-tile,.quick-module,.full-kpi,.dash-card,.neo-gateway,.neo-gateway-tile,.neo-command-card,.cockpit-section,.cockpit-tile,.cockpit-overview,.cockpit-kpi,.cockpit-env,.cockpit-recent,.cockpit-subtabs span,.cockpit-tabs button,.neo-main-metric,.neo-envelope,.neo-finance-stats>div,.stat,.aurora-statgrid section) {
+ background:var(--nexus-glass)!important; background-color:var(--nexus-glass)!important; background-image:none!important; border-color:var(--nexus-glass-border)!important; backdrop-filter:none!important; -webkit-backdrop-filter:none!important;
+}
+/* Ne pas modifier les couleurs des événements ni les fenêtres de saisie. */
+:root[data-theme="color"] .aurora-card.cyan,:root[data-theme="dark"] .aurora-card.cyan{border-color:rgba(31,210,239,.72)!important}
+:root[data-theme="color"] .aurora-card.purple,:root[data-theme="dark"] .aurora-card.purple{border-color:rgba(159,121,255,.72)!important}
+:root[data-theme="color"] .aurora-card.green,:root[data-theme="dark"] .aurora-card.green{border-color:rgba(44,219,178,.72)!important}
+:root[data-theme="color"] .aurora-card.amber,:root[data-theme="dark"] .aurora-card.amber{border-color:rgba(255,186,88,.72)!important}
