@@ -633,3 +633,41 @@ body::before{filter:none!important;image-rendering:auto!important}
 :root[data-theme="color"] .aurora-card.purple,:root[data-theme="dark"] .aurora-card.purple{border-color:rgba(159,121,255,.72)!important}
 :root[data-theme="color"] .aurora-card.green,:root[data-theme="dark"] .aurora-card.green{border-color:rgba(44,219,178,.72)!important}
 :root[data-theme="color"] .aurora-card.amber,:root[data-theme="dark"] .aurora-card.amber{border-color:rgba(255,186,88,.72)!important}
+
+
+/* NEXUS V5.4.4 — lisibilite et verre coherent, y compris les modules historiques.
+   Les boutons, champs, modales et barres de navigation restent distincts. */
+:root { --nexus-glass:rgba(7,23,43,.74); --nexus-glass-border:rgba(135,206,245,.38); }
+:root[data-module] .content :is(
+ .panel,.card,.record-head,.record-kpis > div,.aurora-panel,.aurora-card,
+ .aurora-category,.aurora-module,.aurora-event,.neo-widget,.neo-module-banner,
+ .neo-module-core,.neo-module-note,.neo-gateway-tile,.neo-command-card,
+ .module-tile,.quick-module,.full-kpi,.dash-card,.google-panel,
+ .nutrition-meal-card,.nutrition-food-row,.week-mini-day,.week-overview,
+ .week-row,.week-events,.week-empty,.month,.week,.stat,.neo-main-metric,
+ .neo-envelope,.cockpit-section,.cockpit-tile,.cockpit-overview,.cockpit-kpi,
+ .cockpit-env,.cockpit-recent,.cockpit-budget,.cockpit-notice,.cockpit-empty,
+ .cockpit-month,.aurora-statgrid section,.neo-finance-stats > div,
+ .macro-grid > div,.sport-stats > *, .record-kpis > *
+),
+:root[data-module] .content :is(.panel,.card) > :is(.panel,.card) {
+ background:var(--nexus-glass)!important;
+ background-color:var(--nexus-glass)!important;
+ background-image:none!important;
+ border-color:var(--nexus-glass-border)!important;
+ backdrop-filter:none!important;
+ -webkit-backdrop-filter:none!important;
+}
+/* Panneaux des anciens modules avec specificite historique plus forte. */
+:root[data-module]:not([data-module="home"]):not([data-module="info"]) .content :is(.panel,.card),
+:root[data-module="trading"] .content .neo-module-banner,
+:root[data-module="nutrition"] .content :is(.panel,.card) {
+ background:var(--nexus-glass)!important;
+ background-color:var(--nexus-glass)!important;
+ background-image:none!important;
+}
+/* Conserver les couleurs d'accent des quatre familles de cartes. */
+.aurora-card.cyan{border-color:rgba(31,210,239,.72)!important}
+.aurora-card.purple{border-color:rgba(159,121,255,.72)!important}
+.aurora-card.green{border-color:rgba(44,219,178,.72)!important}
+.aurora-card.amber{border-color:rgba(255,186,88,.72)!important}
