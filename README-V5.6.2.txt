@@ -1,0 +1,1 @@
+NEXUS V5.6.2 : fonds remplaces sur les 7 modules sans modifier les fonctions. Accueil, Sport, Voyage, Notes : fichiers source 1672x941 ou 941x1672. Nutrition, Maison, Projets : images issues de la planche choisie, encore limitees en definition et non 4K native. Agenda, Budget et Trading conserves. Supabase non modifie.
