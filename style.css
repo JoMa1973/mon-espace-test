@@ -671,3 +671,17 @@ body::before{filter:none!important;image-rendering:auto!important}
 .aurora-card.purple{border-color:rgba(159,121,255,.72)!important}
 .aurora-card.green{border-color:rgba(44,219,178,.72)!important}
 .aurora-card.amber{border-color:rgba(255,186,88,.72)!important}
+
+/* V5.6.0 - fonds selectionnes par utilisateur, sans regeneration */
+:root[data-module="home"]{--nexus-image:url("./nexus-v56-home.jpg")!important}
+:root[data-module="agenda"]{--nexus-image:url("./nexus-v56-agenda.jpg")!important}
+:root[data-module="tasks"]{--nexus-image:url("./nexus-v56-agenda.jpg")!important}
+:root[data-module="budget"]{--nexus-image:url("./nexus-v56-budget.jpg")!important}
+:root[data-module="sport"]{--nexus-image:url("./nexus-v56-sport.jpg")!important}
+:root[data-module="nutrition"]{--nexus-image:url("./nexus-v56-nutrition.jpg")!important}
+:root[data-module="house"]{--nexus-image:url("./nexus-v56-house.jpg")!important}
+:root[data-module="travel"]{--nexus-image:url("./nexus-v56-travel.jpg")!important}
+:root[data-module="notes"]{--nexus-image:url("./nexus-v56-notes.jpg")!important}
+:root[data-module="projects"]{--nexus-image:url("./nexus-v56-projects.jpg")!important}
+:root[data-module="trading"]{--nexus-image:url("./nexus-v56-trading.jpg")!important}
+:root:not([data-module]){--nexus-image:url("./nexus-v56-home.jpg")!important}
