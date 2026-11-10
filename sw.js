@@ -1,6 +1,6 @@
 'use strict';
-const CACHE='nexus-v5.6.2';
-const OFFLINE=['./index.html','./nexus-cloud.js?v=5.6.2','./nexus-cloud.css?v=5.6.2','./style.css?v=5.6.2','./app.js?v=5.6.2','./manifest.webmanifest?v=5.6.2','./icon-192.png','./icon-512.png','./nexus-horizon.jpg','./nexus-metropolis.jpg','./nexus-quantum.jpg','./nexus-serenity.jpg','./nexus-altitude.jpg','./nexus-infinity.jpg','./nexus-maison.jpg','./nexus-voyage.jpg','./nexus-notes.jpg','./nexus-projets.jpg','./nexus-v56-sport.jpg','./nexus-v56-nutrition.jpg','./nexus-v56-agenda.jpg','./nexus-v56-budget.jpg','./nexus-v56-house.jpg','./nexus-v56-travel.jpg','./nexus-v56-notes.jpg','./nexus-v56-projects.jpg','./nexus-v56-trading.jpg','./nexus-v56-home.jpg'];
+const CACHE='nexus-v5.6.3';
+const OFFLINE=['./index.html','./nexus-cloud.js?v=5.6.3','./nexus-cloud.css?v=5.6.3','./style.css?v=5.6.3','./app.js?v=5.6.3','./manifest.webmanifest?v=5.6.3','./icon-192.png','./icon-512.png','./nexus-horizon.jpg','./nexus-metropolis.jpg','./nexus-quantum.jpg','./nexus-serenity.jpg','./nexus-altitude.jpg','./nexus-infinity.jpg','./nexus-maison.jpg','./nexus-voyage.jpg','./nexus-notes.jpg','./nexus-projets.jpg','./nexus-v56-sport.jpg','./nexus-v56-nutrition.jpg','./nexus-v56-agenda.jpg','./nexus-v56-budget.jpg','./nexus-v56-house.jpg','./nexus-v56-travel.jpg','./nexus-v56-notes.jpg','./nexus-v56-projects.jpg','./nexus-v56-trading.jpg','./nexus-v56-home.jpg'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(OFFLINE)).then(()=>self.skipWaiting()));
 });

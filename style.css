@@ -685,3 +685,8 @@ body::before{filter:none!important;image-rendering:auto!important}
 :root[data-module="projects"]{--nexus-image:url("./nexus-v56-projects.jpg")!important}
 :root[data-module="trading"]{--nexus-image:url("./nexus-v56-trading.jpg")!important}
 :root:not([data-module]){--nexus-image:url("./nexus-v56-home.jpg")!important}
+
+/* NEXUS V5.6.3 — images natives recadrees : aucun flou artificiel. */
+body::before{background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;filter:none!important;}
+/* Sport : conserver le coureur sur petit ecran en privilegiant le tiers gauche. */
+@media(max-width:700px){:root[data-module="sport"] body::before{background-position:29% center!important;}}
