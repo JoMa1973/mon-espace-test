@@ -1,0 +1,1 @@
+NEXUS V5.6.1 - 3 visuels valides Agenda/Budget/Trading remplaces par les images individuelles 1672x941. Les 7 autres restent inchanges et sont encore des miniatures; pas de promesse 4K. Pas de modification des identifiants Supabase ni des donnees locales.
