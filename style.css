@@ -690,3 +690,18 @@ body::before{filter:none!important;image-rendering:auto!important}
 body::before{background-size:cover!important;background-position:center center!important;background-repeat:no-repeat!important;filter:none!important;}
 /* Sport : conserver le coureur sur petit ecran en privilegiant le tiers gauche. */
 @media(max-width:700px){:root[data-module="sport"] body::before{background-position:29% center!important;}}
+
+/* V5.6.4 - responsive framing, preserve approved imagery.
+   Original portrait images are 340-360px wide: CSS cannot make them native UHD. */
+:root[data-module="trading"] body::before{background-position:66% center!important}
+:root[data-module="sport"] body::before{background-position:70% center!important}
+/* Small displays: preserve the chart area next to the bull.
+   Using contain on trading avoids cropping the approved scene. */
+@media(max-width:700px){
+ :root[data-module="trading"] body::before{background-size:contain!important;background-position:center center!important;background-color:#071728!important}
+ :root[data-module="sport"] body::before{background-position:76% center!important}
+ :root[data-module="house"] body::before{background-position:52% center!important}
+ :root[data-module="travel"] body::before{background-position:52% center!important}
+ :root[data-module="nutrition"] body::before{background-position:52% center!important}
+ :root[data-module="projects"] body::before{background-position:52% center!important}
+}
